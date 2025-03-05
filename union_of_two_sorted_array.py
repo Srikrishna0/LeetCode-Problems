@@ -5,11 +5,11 @@ class Solution:
     #Function to return a list containing the union of the two arrays.
     def findUnion(self,a,b):
         # code here 
-        i, j = 0, 0
-        res =[]
+        i, j = 0, 0                                     # two pointer approach(i for arr1 & j for arr2)
+        res =[]                                         # initialize an empty array which is the the union array
         
-        while i < len(a) and j < len(b):
-            if a[i] <= b[j]:
+        while i < len(a) and j < len(b):                # loop over both the arrays 
+            if a[i] <= b[j]:                            # 
                 if len(res) == 0 or res[-1] != a[i]:
                     res.append(a[i])
                 i += 1
